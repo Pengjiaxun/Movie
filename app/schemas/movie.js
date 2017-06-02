@@ -3,10 +3,6 @@ var Schema = mongoose.Schema
 var ObjectId = Schema.Types.ObjectId
 
 var MovieSchema = new Schema({
-    category: {
-        type: ObjectId,
-        ref: 'category'
-    },
     director: String,
     title: String,
     lang: String,
@@ -15,6 +11,14 @@ var MovieSchema = new Schema({
     flash: String,
     poster: String,
     year: Number,
+    pv: {
+        type: Number,
+        default: 0
+    },
+    category: {
+        type: ObjectId,
+        ref: 'category'
+    },
     meta: {
     	createAt: {
     		type: Date,

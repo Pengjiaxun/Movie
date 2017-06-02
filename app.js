@@ -16,6 +16,8 @@ mongoose.connect(dbUrl)
 var bodyParser = require(('body-parser'))
 var cookieParser = require('cookie-parser')
 var cookieSession = require('cookie-session')
+var multipart = require('connect-multiparty');
+app.use(multipart());
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
